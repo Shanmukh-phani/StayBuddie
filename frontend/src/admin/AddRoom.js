@@ -70,9 +70,6 @@ const ProfileIcon = styled(IconButton)({
 
 const RoomManagement = () => {
 
-  const IP_ADDRESS='http://192.168.1.2:5000';
-
-
   // Add a validation function
   const validateRoomData = () => {
     if (roomData.room_vacancy > roomData.room_sharing) {
@@ -128,11 +125,11 @@ const RoomManagement = () => {
       const hostel_id = localStorage.getItem('hostel_id');
       const token = localStorage.getItem('authToken');
   
-      if (!hostel_id || !IP_ADDRESS) {
+      if (!hostel_id || !process.env.REACT_APP_URL) {
         toast.error('No hostel_id found.');
       }
       
-      const response = await axios.get(`${IP_ADDRESS}/admin/rooms`, {
+      const response = await axios.get(`${process.env.REACT_APP_URL}/admin/rooms`, {
         params: { hostel_id },
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
@@ -194,7 +191,7 @@ const RoomManagement = () => {
       console.log('Sending data:', { ...roomData, hostel_id });
 
       // Send POST request to add a new room
-      const response = await fetch(`${IP_ADDRESS}/admin/addRoom`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/admin/addRoom`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -269,7 +266,7 @@ const handleEditSubmit = async () => {
 
     // Send PUT request to update a room
     const response = await axios.put(
-      `${IP_ADDRESS}/admin/updateRoom/${editRoomData._id}`,
+      `${process.env.REACT_APP_URL}/admin/updateRoom/${editRoomData._id}`,
       { ...editRoomData, hostel_id }, // Include hostel_id in the request body
       {
         headers: {
@@ -321,7 +318,7 @@ const handleDelete = async () => {
 
   try {
     const response = await axios.delete(
-      `${IP_ADDRESS}/admin/deleteRoom/${selectedRoomId}`,
+      `${process.env.REACT_APP_URL}/admin/deleteRoom/${selectedRoomId}`,
       {
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the Authorization header

@@ -219,7 +219,7 @@ const AddHostelForm = () => {
 
     if (isValid) {
       try {
-        const response = await fetch('http://192.168.1.29:5000/admin/create', {
+        const response = await fetch(`${process.env.REACT_APP_URL}/admin/create`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),

@@ -56,7 +56,7 @@ const ProfileIcon = styled(IconButton)({
 
 const HostelProfile = () => {
 
-  const IP_ADDRESS='http://192.168.1.2:5000';
+  // const process.env.REACT_APP_URL='http://192.168.1.2:5000';
 
   const [isEditOpen, setIsEditOpen] = useState(false);
 
@@ -87,7 +87,7 @@ const HostelProfile = () => {
         return;
       }
 
-      const response = await axios.get(`${IP_ADDRESS}/admin/hostelProfile`, {
+      const response = await axios.get(`${process.env.REACT_APP_URL}/admin/hostelProfile`, {
         params: { hostel_id },
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the Authorization header

@@ -67,7 +67,6 @@ const ProfileIcon = styled(IconButton)({
 
 const AddBuddie = () => {
 
-  const IP_ADDRESS = 'http://192.168.1.2:5000';
 
 
   const [open, setOpen] = useState(false);
@@ -156,7 +155,7 @@ const AddBuddie = () => {
       }
 
       // Fetch buddies from API
-      const response = await fetch(`${IP_ADDRESS}/admin/buddies?hostel_id=${hostel_id}`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/admin/buddies?hostel_id=${hostel_id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -197,7 +196,7 @@ const AddBuddie = () => {
       const hostel_id = localStorage.getItem('hostel_id'); // authToken is your hostel_id
       const token = localStorage.getItem('authToken'); // authToken is your hostel_id
 
-      const response = await fetch(`${IP_ADDRESS}/admin/rooms?hostel_id=${hostel_id}`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/admin/rooms?hostel_id=${hostel_id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -356,7 +355,7 @@ const AddBuddie = () => {
         const dataToSend = { ...formData, hostel_id: hostelId };
   
         // Send POST request to add a new buddie
-        const response = await axios.post(`${IP_ADDRESS}/admin/addBuddie`, dataToSend, {
+        const response = await axios.post(`${process.env.REACT_APP_URL}/admin/addBuddie`, dataToSend, {
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
             'Content-Type': 'application/json',
@@ -413,7 +412,7 @@ const AddBuddie = () => {
   
         // Send PUT request to update a buddie
         const response = await axios.put(
-          `${IP_ADDRESS}/admin/updateBuddie/${editFormData._id}`,
+          `${process.env.REACT_APP_URL}/admin/updateBuddie/${editFormData._id}`,
           dataToSend,
           {
             headers: {
@@ -453,7 +452,7 @@ const handleDelete = async () => {
 
   try {
     const response = await axios.delete(
-      `${IP_ADDRESS}/admin/deleteBuddie/${selectedBuddieId}`,
+      `${process.env.REACT_APP_URL}/admin/deleteBuddie/${selectedBuddieId}`,
       {
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the Authorization header

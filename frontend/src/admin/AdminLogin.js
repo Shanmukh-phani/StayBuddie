@@ -128,7 +128,7 @@ const AdminLogin = () => {
     setErrors({});
   
     try {
-      const loginResponse = await axios.post('http://192.168.1.2:5000/admin/login', {
+      const loginResponse = await axios.post(`${process.env.REACT_APP_URL}/admin/login`, {
         hostel_phone: hostelPhone,
         hostel_password: hostelPassword,
       });
