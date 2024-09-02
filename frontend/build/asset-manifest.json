@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.83e86ce9.css",
+    "main.js": "/static/js/main.244d9698.js",
+    "static/js/453.d855a71b.chunk.js": "/static/js/453.d855a71b.chunk.js",
+    "static/media/img1.jpg": "/static/media/img1.cf2c10b530ade90c9f8e.jpg",
+    "static/media/img2.jpg": "/static/media/img2.fb9d6c9e299aecd73506.jpg",
+    "static/media/img3.jpg": "/static/media/img3.7a9b93c3b2c0c0611243.jpg",
+    "static/media/img22.jpg": "/static/media/img22.be1a0d6f12f5020ee49b.jpg",
+    "static/media/img33.jpg": "/static/media/img33.81ca195c87fc1323a66e.jpg",
+    "static/media/notFound.png": "/static/media/notFound.2c0dcce6a74a55f9129f.png",
+    "static/media/img11.jpg": "/static/media/img11.7901048ead5d1f98b1f3.jpg",
+    "static/media/hostel3.jpg": "/static/media/hostel3.6d6355a1871250bb4d10.jpg",
+    "static/media/hostel1.jpg": "/static/media/hostel1.fa3442fc492beb84c764.jpg",
+    "static/media/hostel2.jpg": "/static/media/hostel2.ca95fe1ed334440e75ee.jpg",
+    "static/media/hyd.png": "/static/media/hyd.c8839bc1d66c0652cd9d.png",
+    "static/media/mumbai.png": "/static/media/mumbai.a5b86ca23d1a686e2c11.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.83e86ce9.css.map": "/static/css/main.83e86ce9.css.map",
+    "main.244d9698.js.map": "/static/js/main.244d9698.js.map",
+    "453.d855a71b.chunk.js.map": "/static/js/453.d855a71b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83e86ce9.css",
+    "static/js/main.244d9698.js"
+  ]
+}
